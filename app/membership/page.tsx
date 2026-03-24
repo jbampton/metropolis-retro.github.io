@@ -29,13 +29,13 @@ const tiers = [
       "Mentor pairing opportunities",
     ],
   },
-]
+];
 
 const steps = [
   "Send us a contact message with your playing level and goals.",
   "Choose your preferred meetup rhythm and event format.",
   "Attend your first session and get paired into suitable games.",
-]
+];
 
 export default function MembershipPage() {
   return (

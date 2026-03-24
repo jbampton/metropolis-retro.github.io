@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useCallback, useState } from "react"
 import type { ContactFormValues } from "@/lib/validators/contact"

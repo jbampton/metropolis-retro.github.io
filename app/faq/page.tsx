@@ -33,7 +33,7 @@ const faqItems = [
     answer:
       "Use the newsletter form in the footer and check the updates page regularly for venue, timing, and format announcements.",
   },
-]
+];
 
 export default function FaqPage() {
   return (

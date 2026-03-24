@@ -19,7 +19,7 @@ const schedule = [
     time: "2:00 PM - 5:00 PM",
     details: "Swiss rapid rounds with standings and short post-game analysis.",
   },
-]
+];
 
 export function VenueSchedule() {
   return (

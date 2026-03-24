@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link"
 import { NewsletterSubscribeForm } from "@/components/forms/newsletter-subscribe-form"
@@ -10,11 +10,11 @@ import {
 } from "@/components/icons/brand-social-icons"
 
 const socialLinks = [
-  { href: "#", icon: BrandTwitterIcon, label: "Twitter" },
-  { href: "#", icon: BrandLinkedInIcon, label: "LinkedIn" },
-  { href: "#", icon: BrandGitHubIcon, label: "GitHub" },
-  { href: "#", icon: BrandDribbbleIcon, label: "Dribbble" },
-]
+  { href: "https://x.com", icon: BrandTwitterIcon, label: "Twitter" },
+  { href: "https://www.linkedin.com", icon: BrandLinkedInIcon, label: "LinkedIn" },
+  { href: "https://github.com", icon: BrandGitHubIcon, label: "GitHub" },
+  { href: "https://dribbble.com", icon: BrandDribbbleIcon, label: "Dribbble" },
+];
 
 const footerLinks = [
   { href: "/", label: "Home" },
@@ -24,7 +24,7 @@ const footerLinks = [
   { href: "/faq", label: "FAQ" },
   { href: "/updates", label: "Updates" },
   { href: "/contact", label: "Contact" },
-]
+];
 
 export function Footer() {
   return (
@@ -45,6 +45,8 @@ export function Footer() {
                 <Link
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-full bg-secondary transition-colors hover:bg-opacity-10"
                   onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#203eec20")}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "")}

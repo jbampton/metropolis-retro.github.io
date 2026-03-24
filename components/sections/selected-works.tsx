@@ -1,44 +1,10 @@
-"use client"
+"use client";
 
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { SectionTitle } from "@/components/ui/section-title"
-
-const works = [
-  {
-    id: 1,
-    title: "Thursday CBD Meetup",
-    category: "Weekly Meetup",
-    description: "Casual and competitive games in Brisbane CBD with clocks, boards, and friendly pairings.",
-    image: "/images/work-onboarding.png",
-    tags: ["Brisbane CBD", "All Levels", "OTB"],
-  },
-  {
-    id: 2,
-    title: "Saturday Rapid Arena",
-    category: "Club Event",
-    description: "A fast-paced rapid event with Swiss rounds, standings, and post-game analysis.",
-    image: "/images/work-fashion.png",
-    tags: ["Rapid", "Swiss", "Rated Practice"],
-  },
-  {
-    id: 3,
-    title: "Beginner Chess Workshop",
-    category: "Learning Session",
-    description: "Learn core tactics, opening principles, and endgame basics with guided coaching.",
-    image: "/images/work-tasks.png",
-    tags: ["Beginners", "Coaching", "Practice Games"],
-  },
-  {
-    id: 4,
-    title: "Metropolis Retro Open",
-    category: "Tournament",
-    description: "Our signature Brisbane event featuring multiple divisions and club prizes.",
-    image: "/images/work-crypto.png",
-    tags: ["Classical", "Prizes", "Community"],
-  },
-]
+import { events } from "@/lib/content/events"
 
 export function SelectedWorks() {
   return (
@@ -50,7 +16,7 @@ export function SelectedWorks() {
             Upcoming events
           </SectionTitle>
           <Link
-            href="#"
+            href="/events"
             className="hidden md:inline-flex items-center gap-2 text-sm transition-colors"
             style={{ color: "#203eec" }}
           >
@@ -60,7 +26,7 @@ export function SelectedWorks() {
         </div>
 
         <div className="relative">
-          {works.map((work, index) => (
+          {events.map((work, index) => (
             <div
               key={work.id}
               className="sticky"
@@ -69,7 +35,7 @@ export function SelectedWorks() {
                 zIndex: index + 1,
               }}
             >
-              <Link href="#" className="group block pt-10">
+              <Link href={`/events/${work.slug}`} className="group block pt-10">
                 <article className="overflow-hidden rounded-2xl md:rounded-3xl border border-border bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   {/* Image */}
                   <div className="relative aspect-[2/1] overflow-hidden bg-secondary">
@@ -115,7 +81,7 @@ export function SelectedWorks() {
         {/* Mobile View All */}
         <div className="md:hidden mt-8 text-center">
           <Link
-            href="#"
+            href="/events"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium border rounded-full hover:bg-secondary transition-colors"
             style={{ color: "#203eec", borderColor: "#203eec" }}
           >

@@ -1,6 +1,8 @@
-"use client"
+"use client";
 
-const clients = [
+const names = [
+  "John Bampton",
+  "Seyyed Ali Mohammadiyeh",
   "Brisbane CBD",
   "South Bank",
   "Fortitude Valley",
@@ -9,7 +11,7 @@ const clients = [
   "Indooroopilly",
   "Kangaroo Point",
   "Chermside",
-]
+];
 
 export function ClientLogos() {
   return (
@@ -21,7 +23,7 @@ export function ClientLogos() {
       {/* Marquee Container */}
       <div className="relative">
         <div className="flex animate-marquee hover:[animation-play-state:paused]">
-          {[...clients, ...clients].map((client, index) => (
+          {[...names, ...names].map((client, index) => (
             <div key={`${client}-${index}`} className="flex items-center justify-center min-w-[200px] px-8">
               <span className="text-2xl md:text-3xl font-semibold text-muted-foreground/50 whitespace-nowrap">
                 {client}
@@ -31,5 +33,5 @@ export function ClientLogos() {
         </div>
       </div>
     </section>
-  )
+  );
 }

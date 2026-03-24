@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link"
 import Image from "next/image"
@@ -96,7 +96,7 @@ export function Hero() {
               Join Next Meetup
             </Link>
             <Link
-              href="#works"
+              href="#events"
               className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium transition-colors"
               style={{ color: "#203eec" }}
             >

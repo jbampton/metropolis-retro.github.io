@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 const skills = [
   "Weekly Club Meetups",
@@ -10,13 +10,13 @@ const skills = [
   "Game Analysis",
   "Junior Development",
   "Community Events",
-]
+];
 
 const stats = [
   { value: "Weekly", label: "Official Meetups" },
   { value: "All", label: "Skill Levels Welcome" },
   { value: "Brisbane", label: "Club Home Base" },
-]
+];
 
 import { SectionTitle } from "@/components/ui/section-title"
 

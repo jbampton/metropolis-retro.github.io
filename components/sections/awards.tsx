@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
@@ -11,7 +11,7 @@ const awards = [
   { title: "Rapid arena format added", year: "2025", organization: "Weekend Events", link: "#" },
   { title: "First seasonal open announced", year: "2026", organization: "Club Tournament", link: "#" },
   { title: "Growing Brisbane chess network", year: "2026", organization: "Local Community", link: "#" },
-]
+];
 
 export function Awards() {
   return (

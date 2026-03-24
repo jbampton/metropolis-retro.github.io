@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react"
 
@@ -7,7 +7,7 @@ export function GradientBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const selectedWorksSection = document.querySelector("#works")
+      const selectedWorksSection = document.querySelector("#events")
       if (selectedWorksSection) {
         const rect = selectedWorksSection.getBoundingClientRect()
         // Show gradient when Selected Works section is in viewport

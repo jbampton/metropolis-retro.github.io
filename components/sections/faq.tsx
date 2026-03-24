@@ -24,7 +24,7 @@ const faqs = [
     answer:
       "Yes. We run dedicated beginner training nights and clear event formats so new players can participate comfortably.",
   },
-]
+];
 
 export function Faq() {
   return (

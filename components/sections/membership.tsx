@@ -7,7 +7,7 @@ const benefits = [
   "Member-only training sessions",
   "Seasonal tournament eligibility",
   "Structured improvement pathways",
-]
+];
 
 export function Membership() {
   return (

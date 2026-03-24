@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type React from "react";
 
@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "#works", label: "Upcoming events", number: "01" },
+  { href: "#events", label: "Upcoming events", number: "01" },
   { href: "#about", label: "About", number: "02" },
   { href: "#testimonials", label: "What members say", number: "03" },
   { href: "#awards", label: "Club milestones", number: "04" },

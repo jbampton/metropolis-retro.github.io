@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     const parsed = contactFormSchema.safeParse(json)
 
     if (!parsed.success) {
-      const firstIssue = parsed.error.issues[0]
+      const firstIssue = parsed.error.issues[0];
 
       return NextResponse.json(
         {

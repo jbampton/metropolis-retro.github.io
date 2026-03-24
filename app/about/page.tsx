@@ -17,14 +17,14 @@ const pillars = [
     description:
       "Metropolis Retro runs regular meetups and chess events with clear formats, pairings, and tournament standards.",
   },
-]
+];
 
 const values = [
   "Respectful club culture",
   "Fair play and sportsmanship",
   "Learning at every level",
   "Consistent weekly rhythm",
-]
+];
 
 export default function AboutPage() {
   return (

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react"
 import Image from "next/image"
@@ -75,7 +75,7 @@ const testimonials = [
     company: "Brisbane",
     blurColor: "bg-rose-500",
   },
-]
+];
 
 export function Testimonials() {
   const [isPaused, setIsPaused] = useState(false)

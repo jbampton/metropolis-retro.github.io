@@ -1,36 +1,8 @@
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-
-const events = [
-  {
-    name: "Thursday CBD Meetup",
-    format: "Casual + Rated Practice",
-    time: "Every Thursday, 6:30 PM",
-    location: "Brisbane CBD",
-    note: "Bring your set if you can. Clocks available for timed games.",
-  },
-  {
-    name: "Saturday Rapid Arena",
-    format: "Swiss Rapid",
-    time: "Every Saturday, 2:00 PM",
-    location: "Inner Brisbane",
-    note: "Fast rounds with standings and short review sessions after play.",
-  },
-  {
-    name: "Beginner Training Night",
-    format: "Workshop + Games",
-    time: "Wednesday, 6:00 PM",
-    location: "South Brisbane",
-    note: "Tactics, opening principles, and guided practical games.",
-  },
-  {
-    name: "Metropolis Retro Open",
-    format: "Classical Tournament",
-    time: "Seasonal Event",
-    location: "Brisbane",
-    note: "Multiple divisions and club prizes for standout results.",
-  },
-]
+import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
+import { events } from "@/lib/content/events"
 
 export default function EventsPage() {
   return (
@@ -51,9 +23,9 @@ export default function EventsPage() {
         <section className="py-16 md:py-20">
           <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {events.map((event) => (
-              <article key={event.name} className="rounded-3xl border border-border bg-card p-6 md:p-8 transition-all hover:-translate-y-1 hover:shadow-lg">
+              <article key={event.slug} className="rounded-3xl border border-border bg-card p-6 md:p-8 transition-all hover:-translate-y-1 hover:shadow-lg">
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">{event.format}</p>
-                <h2 className="mt-3 text-2xl md:text-3xl tracking-tight">{event.name}</h2>
+                <h2 className="mt-3 text-2xl md:text-3xl tracking-tight">{event.title}</h2>
                 <div className="mt-5 space-y-2 text-sm text-muted-foreground">
                   <p>
                     <span className="font-medium text-foreground">Time:</span> {event.time}
@@ -63,6 +35,10 @@ export default function EventsPage() {
                   </p>
                 </div>
                 <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{event.note}</p>
+                <Link href={`/events/${event.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm" style={{ color: "#203eec" }}>
+                  View event details
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
               </article>
             ))}
           </div>
