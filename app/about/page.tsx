@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 const pillars = [
   {
@@ -35,6 +35,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["about Metropolis Retro", "Brisbane chess community", "club values"]),
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    title: "About | Metropolis Retro",
+    description:
+      "Learn about Metropolis Retro, a Brisbane chess club focused on community, structured improvement, and official events.",
+    url: `${SITE_URL}/about`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Metropolis Retro",
+    description:
+      "Learn about Metropolis Retro, a Brisbane chess club focused on community, structured improvement, and official events.",
   },
 }
 

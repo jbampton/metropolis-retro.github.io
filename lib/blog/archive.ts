@@ -37,6 +37,19 @@ export const blogIndexMetadata: Metadata = {
   alternates: {
     canonical: "/blog",
   },
+  openGraph: {
+    title: "Blog | Metropolis Retro",
+    description:
+      "Read Metropolis Retro blog posts on chess training, tournament preparation, openings, and practical improvement for club players.",
+    url: `${SITE_URL}/blog`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Metropolis Retro",
+    description:
+      "Read Metropolis Retro blog posts on chess training, tournament preparation, openings, and practical improvement for club players.",
+  },
 }
 
 export function getBlogCategoryStaticParams() {
@@ -112,6 +125,11 @@ export function getBlogCategoryMetadata(slug: string): Metadata {
       url: `${SITE_URL}/blog/category/${slug}`,
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${category} Articles | Metropolis Retro Blog`,
+      description,
+    },
   }
 }
 
@@ -143,6 +161,11 @@ export function getBlogTagMetadata(slug: string): Metadata {
       description,
       url: `${SITE_URL}/blog/tag/${slug}`,
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `#${tag} Articles | Metropolis Retro Blog`,
+      description,
     },
   }
 }

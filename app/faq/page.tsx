@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 const faqItems = [
   {
@@ -44,6 +44,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["chess club faq", "Brisbane chess questions", "meetup rules"]),
   alternates: {
     canonical: "/faq",
+  },
+  openGraph: {
+    title: "FAQ | Metropolis Retro",
+    description:
+      "Find answers to common questions about Metropolis Retro meetups, formats, registration, and participation in Brisbane.",
+    url: `${SITE_URL}/faq`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Metropolis Retro",
+    description:
+      "Find answers to common questions about Metropolis Retro meetups, formats, registration, and participation in Brisbane.",
   },
 }
 

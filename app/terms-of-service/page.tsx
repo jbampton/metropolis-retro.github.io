@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["terms of service", "chess club terms", "event participation policy"]),
   alternates: {
     canonical: "/terms-of-service",
+  },
+  openGraph: {
+    title: "Terms of Service | Metropolis Retro",
+    description:
+      "Review Metropolis Retro terms for club participation, event changes, and general liability conditions.",
+    url: `${SITE_URL}/terms-of-service`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Metropolis Retro",
+    description:
+      "Review Metropolis Retro terms for club participation, event changes, and general liability conditions.",
   },
 }
 

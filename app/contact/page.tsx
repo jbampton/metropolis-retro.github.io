@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { ContactForm } from "@/components/forms/contact-form"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["contact chess club", "Brisbane meetup contact", "join chess club Brisbane"]),
   alternates: {
     canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact | Metropolis Retro",
+    description:
+      "Contact Metropolis Retro for Brisbane meetup details, event registration, and chess club membership questions.",
+    url: `${SITE_URL}/contact`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Metropolis Retro",
+    description:
+      "Contact Metropolis Retro for Brisbane meetup details, event registration, and chess club membership questions.",
   },
 }
 

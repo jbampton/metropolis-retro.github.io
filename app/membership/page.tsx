@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 const tiers = [
   {
@@ -46,6 +46,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["chess club membership", "Brisbane chess members", "join Metropolis Retro"]),
   alternates: {
     canonical: "/membership",
+  },
+  openGraph: {
+    title: "Membership | Metropolis Retro",
+    description:
+      "Explore Metropolis Retro membership paths for casual, competitive, and development-focused chess players in Brisbane.",
+    url: `${SITE_URL}/membership`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Membership | Metropolis Retro",
+    description:
+      "Explore Metropolis Retro membership paths for casual, competitive, and development-focused chess players in Brisbane.",
   },
 }
 

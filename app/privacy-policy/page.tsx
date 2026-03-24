@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["privacy policy", "chess club privacy", "Metropolis Retro legal"]),
   alternates: {
     canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Metropolis Retro",
+    description:
+      "Read the Metropolis Retro privacy policy, including how we collect, use, and retain member communication data.",
+    url: `${SITE_URL}/privacy-policy`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Metropolis Retro",
+    description:
+      "Read the Metropolis Retro privacy policy, including how we collect, use, and retain member communication data.",
   },
 }
 

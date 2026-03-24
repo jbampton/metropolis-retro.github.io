@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { updates } from "@/lib/content/updates"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Updates",
@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["chess club news", "Brisbane chess updates", "event announcements"]),
   alternates: {
     canonical: "/updates",
+  },
+  openGraph: {
+    title: "Updates | Metropolis Retro",
+    description:
+      "Read the latest Metropolis Retro announcements, schedule updates, and club news for Brisbane chess events and meetups.",
+    url: `${SITE_URL}/updates`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Updates | Metropolis Retro",
+    description:
+      "Read the latest Metropolis Retro announcements, schedule updates, and club news for Brisbane chess events and meetups.",
   },
 }
 

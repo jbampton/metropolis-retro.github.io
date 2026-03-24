@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { events } from "@/lib/content/events"
-import { pageKeywords } from "@/lib/seo"
+import { SITE_URL, pageKeywords } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Events",
@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   keywords: pageKeywords(["Brisbane chess events", "rapid chess Brisbane", "chess tournaments Brisbane"]),
   alternates: {
     canonical: "/events",
+  },
+  openGraph: {
+    title: "Events | Metropolis Retro",
+    description:
+      "Browse upcoming Metropolis Retro chess meetups and tournament formats across Brisbane, including rapid, classical, and workshop sessions.",
+    url: `${SITE_URL}/events`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Events | Metropolis Retro",
+    description:
+      "Browse upcoming Metropolis Retro chess meetups and tournament formats across Brisbane, including rapid, classical, and workshop sessions.",
   },
 }
 
