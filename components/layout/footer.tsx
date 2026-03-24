@@ -12,10 +12,10 @@ const socialLinks = [
 
 const footerLinks = [
   { href: "/", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#works", label: "Events" },
-  { href: "#insights", label: "Updates" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/events", label: "Events" },
+  { href: "/updates", label: "Updates" },
+  { href: "/contact", label: "Contact" },
 ]
 
 export function Footer() {
@@ -110,10 +110,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-16 pt-8 border-t border-border">
           <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Metropolis Retro. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/privacy-policy" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/terms-of-service" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Terms of Service
             </Link>
           </div>

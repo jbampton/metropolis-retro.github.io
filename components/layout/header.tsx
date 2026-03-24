@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -18,6 +19,7 @@ const navItems = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,11 @@ export function Header() {
   }, [])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (pathname !== "/") {
+      setIsMobileMenuOpen(false)
+      return
+    }
+
     e.preventDefault()
     const element = document.querySelector(href)
     if (element) {
@@ -43,6 +50,14 @@ export function Header() {
     setIsMobileMenuOpen(false)
   }
 
+  const getNavHref = (href: string) => {
+    if (pathname === "/") {
+      return href
+    }
+
+    return `/${href}`
+  }
+
   return (
     <>
       <header
@@ -55,8 +70,12 @@ export function Header() {
           <nav className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link
-              href="#"
+              href="/"
               onClick={(e) => {
+                if (pathname !== "/") {
+                  return
+                }
+
                 e.preventDefault()
                 window.scrollTo({ top: 0, behavior: "smooth" })
               }}
@@ -70,7 +89,7 @@ export function Header() {
               {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={getNavHref(item.href)}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -83,7 +102,7 @@ export function Header() {
             {/* CTA Button */}
             <div className="hidden md:block">
               <Link
-                href="#contact"
+                href={pathname === "/" ? "#contact" : "/contact"}
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full text-white transition-all hover:shadow-xl relative overflow-hidden group"
                 style={{
                   background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
@@ -120,7 +139,7 @@ export function Header() {
               {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={getNavHref(item.href)}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className="text-3xl font-semibold hover:text-muted-foreground transition-colors"
                 >
@@ -130,7 +149,7 @@ export function Header() {
             </nav>
             <div className="mt-auto">
               <Link
-                href="#contact"
+                href={pathname === "/" ? "#contact" : "/contact"}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium rounded-full text-white transition-all hover:shadow-xl relative overflow-hidden group"
                 style={{

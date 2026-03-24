@@ -1,0 +1,78 @@
+import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
+
+export default function ContactPage() {
+  return (
+    <>
+      <Header />
+      <main className="pt-24 md:pt-32">
+        <section className="py-16 md:py-20 border-b border-border">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-12">
+            <p className="text-sm uppercase tracking-wider text-muted-foreground mb-6">Contact</p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl tracking-tight max-w-4xl">Join the club and play with us in Brisbane.</h1>
+            <p className="mt-8 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+              Send us a message for meetup details, venue info, and upcoming event registration.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+            <div className="rounded-3xl border border-border bg-card p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl tracking-tight">Message the club</h2>
+              <form className="mt-6 space-y-4">
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="w-full rounded-xl bg-secondary px-4 py-3 text-sm outline-none focus:ring-2"
+                  style={{ ["--tw-ring-color" as any]: "#203eec" }}
+                />
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="w-full rounded-xl bg-secondary px-4 py-3 text-sm outline-none focus:ring-2"
+                  style={{ ["--tw-ring-color" as any]: "#203eec" }}
+                />
+                <textarea
+                  placeholder="Tell us what you need"
+                  rows={5}
+                  className="w-full rounded-xl bg-secondary px-4 py-3 text-sm outline-none focus:ring-2 resize-none"
+                  style={{ ["--tw-ring-color" as any]: "#203eec" }}
+                />
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium text-white"
+                  style={{
+                    background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
+                    boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
+                  }}
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <div className="rounded-3xl border border-border bg-card p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl tracking-tight">Club details</h2>
+              <dl className="mt-6 space-y-5 text-sm">
+                <div>
+                  <dt className="text-muted-foreground">Email</dt>
+                  <dd className="mt-1 font-medium">hello@metropolisretro.com</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">City</dt>
+                  <dd className="mt-1 font-medium">Brisbane, Australia</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">Regular meetup days</dt>
+                  <dd className="mt-1 font-medium">Wednesday, Thursday, Saturday</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}
