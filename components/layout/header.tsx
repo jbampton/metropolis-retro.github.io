@@ -112,6 +112,9 @@ export function Header() {
                   {/* <span className="text-xs ml-1 opacity-50">({item.number})</span> */}
                 </Link>
               ))}
+              <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Blog
+              </Link>
             </div>
 
             {/* CTA Button */}
@@ -160,6 +163,13 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/blog"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-3xl font-semibold hover:text-muted-foreground transition-colors"
+              >
+                Blog
+              </Link>
             </nav>
             <div className="mt-auto">
               <Link

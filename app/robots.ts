@@ -1,6 +1,7 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next"
+import { SITE_URL } from "@/lib/seo"
 
-const siteUrl = "http://metropolis-retro.github.io";
+const siteUrl = SITE_URL
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -10,5 +11,5 @@ export default function robots(): MetadataRoute.Robots {
     },
     sitemap: `${siteUrl}/sitemap.xml`,
     host: siteUrl,
-  };
-};
+  }
+}
