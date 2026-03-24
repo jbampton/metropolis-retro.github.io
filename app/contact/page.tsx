@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { ContactForm } from "@/components/forms/contact-form"
 
 export default function ContactPage() {
   return (
@@ -20,36 +21,7 @@ export default function ContactPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
             <div className="rounded-3xl border border-border bg-card p-6 md:p-8">
               <h2 className="text-2xl md:text-3xl tracking-tight">Message the club</h2>
-              <form className="mt-6 space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full rounded-xl bg-secondary px-4 py-3 text-sm outline-none focus:ring-2"
-                  style={{ ["--tw-ring-color" as any]: "#203eec" }}
-                />
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="w-full rounded-xl bg-secondary px-4 py-3 text-sm outline-none focus:ring-2"
-                  style={{ ["--tw-ring-color" as any]: "#203eec" }}
-                />
-                <textarea
-                  placeholder="Tell us what you need"
-                  rows={5}
-                  className="w-full rounded-xl bg-secondary px-4 py-3 text-sm outline-none focus:ring-2 resize-none"
-                  style={{ ["--tw-ring-color" as any]: "#203eec" }}
-                />
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium text-white"
-                  style={{
-                    background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                    boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
-                  }}
-                >
-                  Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             <div className="rounded-3xl border border-border bg-card p-6 md:p-8">
