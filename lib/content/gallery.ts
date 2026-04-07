@@ -112,7 +112,46 @@ export const galleryImages: GalleryImage[] = [
     aspect: "portrait",
     category: "community",
   },
-
+  {
+    id: "14",
+    title: "Trivial Pursuit Mini Card Packs",
+    description: "Quick-play trivia packed with the decades biggest events, trends, fads, entertainment, and more!",
+    imageUrl: "/images/gallery/trivial-pursuit-mini-packs-front.jpeg",
+    aspect: "landscape",
+    category: "events",
+  },
+  {
+    id: "15",
+    title: "Free Stickers",
+    description: "We regularly give away free stickers at events!",
+    imageUrl: "/images/gallery/free-stickers.png",
+    aspect: "landscape",
+    category: "community",
+  },
+  {
+    id: "16",
+    title: "Waddingtons OF LONDON",
+    description: "A storied British brand, synonymous with high-quality playing cards since they first entered the market in 1922. Best known for their Waddingtons Number 1 series",
+    imageUrl: "/images/gallery/waddingtons-of-london-playing-cards.jpeg",
+    aspect: "wide",
+    category: "events",
+  },
+  {
+    id: "17",
+    title: "LEAP® PQ9907S",
+    description: "Digital Chess Timer with delay and bonus",
+    imageUrl: "/images/gallery/LEAP-PQ9907S.jpeg",
+    aspect: "landscape",
+    category: "events",
+  },
+  {
+    id: "18",
+    title: "FIVE CROWNS",
+    description: "The five-suited rummy-style card game",
+    imageUrl: "/images/gallery/five-crowns-front.jpeg",
+    aspect: "landscape",
+    category: "events",
+  },
 ]
 
 export const galleryCategories = Array.from(new Set(galleryImages.map((img) => img.category).filter(Boolean))) as string[]
