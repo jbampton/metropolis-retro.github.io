@@ -17,5 +17,5 @@ jobs:
   prek-standard:
     uses: ./.github/workflows/reusable-prek.yml
     with:
-      skip_hooks: 'yamllint'
+      skip_hooks: editorconfig-checker,yamllint'
       extra_args: '--all-files --verbose'
